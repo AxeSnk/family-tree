@@ -7,6 +7,7 @@
     "build": "npx cross-env NODE_ENV=production webpack -c config/webpack/prod.ts",
     "build-start": "npm run build && npm run start",
     "dev": "npx webpack serve --open -c config/webpack/dev.ts",
+    "check": "npm run eslint && npm run stylelint",
     "eslint": "npx eslint ./src",
     "stylelint": "npx stylelint **/*.scss",
     "stylelint-fix": "npx stylelint **/*.scss --fix"
@@ -26,6 +27,7 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "express": "^4.18.2",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.2",
     "mini-css-extract-plugin": "^2.7.0",
     "postcss-loader": "^7.0.1",
     "sass": "^1.56.1",
@@ -49,5 +51,10 @@
     "last 2 version",
     "> 0.2%",
     "not dead"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run check"
+    }
+  }
 }
