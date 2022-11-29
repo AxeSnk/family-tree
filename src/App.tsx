@@ -3,7 +3,7 @@ import React from 'react';
 import './index.scss';
 
 const App: React.FC = () => (
-  return 
+  return
   <div>App</div>
 );
 
