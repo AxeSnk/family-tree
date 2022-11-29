@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { PATHS, isProduction } = require('./variables');
  
-const config = {
+const config: webpack.Configuration = {
   target: 'web',
   entry: path.resolve(PATHS.src, 'index.tsx'),
   output: {

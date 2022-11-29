@@ -1,11 +1,12 @@
 import { merge } from 'webpack-merge';
+import webpack from 'webpack';
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 import configBase from './base';
 
-const configProd = {
+const configProd: webpack.Configuration = {
   mode: 'production',
   devtool: false,
   plugins: [
