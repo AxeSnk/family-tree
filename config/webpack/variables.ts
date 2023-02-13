@@ -6,5 +6,6 @@ export const PATHS = {
   baseDir,
   src: path.join(baseDir, 'src'),
   build: path.join(baseDir, 'build'),
+  app: path.join(baseDir, 'src', 'app'),
 };
 export const PORT = process.env.PORT ?? 3100;

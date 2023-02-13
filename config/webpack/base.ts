@@ -9,7 +9,7 @@ const { PATHS, isProduction } = require('./variables');
  
 const config: webpack.Configuration = {
   target: 'web',
-  entry: path.resolve(PATHS.src, 'index.tsx'),
+  entry: path.resolve(PATHS.app, 'index.tsx'),
   output: {
     path: PATHS.build,
     filename: `[name]${isProduction ? '.[contenthash]' : ''}.js`,
@@ -73,7 +73,7 @@ const config: webpack.Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve(PATHS.src, 'index.html'),
+      template: path.resolve(PATHS.app, 'index.html'),
       hash: true,
       inject: 'body',
     }),
