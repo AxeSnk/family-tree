@@ -1,8 +1,14 @@
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
 
-import { routeMap } from './lib';
+import { publicRouteMap, privateRouteMap } from './lib';
 
-const Router: React.FC = () => useRoutes(routeMap);
+const Router: React.FC = () => {
+  const user = false;
+  const publicElements = useRoutes(publicRouteMap);
+  const privateElements = useRoutes(privateRouteMap);
+
+  return user ? publicElements : privateElements;
+};
 
 export default Router;
