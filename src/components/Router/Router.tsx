@@ -8,7 +8,7 @@ const Router: React.FC = () => {
   const publicElements = useRoutes(publicRouteMap);
   const privateElements = useRoutes(privateRouteMap);
 
-  return user ? publicElements : privateElements;
+  return user ? privateElements : publicElements;
 };
 
 export default Router;

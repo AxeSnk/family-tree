@@ -48,6 +48,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "firebase": "^9.18.0",
+    "mobx": "^6.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^1.3.0",

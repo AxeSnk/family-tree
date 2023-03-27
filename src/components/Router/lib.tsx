@@ -4,7 +4,7 @@ import { RouteObject } from 'react-router-dom';
 import { Authorization, Tree } from 'pages';
 
 export const publicRouteMap: RouteObject[] = [
-  { path: '/authorization', element: <Authorization /> },
+  { path: '/', element: <Authorization /> },
 ];
 
 export const privateRouteMap: RouteObject[] = [
