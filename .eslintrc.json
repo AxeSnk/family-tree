@@ -7,13 +7,16 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "react-hooks"
+    "react-hooks",
+    "tailwindcss"
   ],
   "extends": [
     "airbnb",
     "airbnb-typescript",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
@@ -32,7 +35,6 @@
     "@typescript-eslint/lines-between-class-members": "off",
     "import/no-cycle": "off",
     "class-methods-use-this": "off",
-    "jsx-quotes": ["error", "prefer-single"],
     "import/prefer-default-export": "off",
     "react/function-component-definition": "off",
     "jsx-a11y/click-events-have-key-events": "off",

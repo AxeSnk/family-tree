@@ -9,3 +9,5 @@
 
 # editors
 .vscode
+
+package-lock.json

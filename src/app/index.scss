@@ -1,6 +1,10 @@
 /* @import 'styles/css-vars.scss';
 @import 'styles/fonts.scss';
  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::before,
 *::after {

@@ -5,7 +5,7 @@ import Store from 'store/store';
 import App from './App';
 
 interface State {
-  store: Store,
+  store: Store;
 }
 
 export const store = new Store();

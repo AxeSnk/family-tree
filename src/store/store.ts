@@ -1,10 +1,10 @@
-import { makeAutoObservable } from 'mobx';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
   User,
 } from 'firebase/auth';
+import { makeAutoObservable } from 'mobx';
 
 import { auth } from '../firebase/firebase-config';
 
@@ -31,29 +31,35 @@ export default class Store {
 
   async login(email: string, password: string) {
     try {
-      const useCredential = await signInWithEmailAndPassword(auth, email, password);
+      const useCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
       const { user } = useCredential;
-
-      console.log('login, user', user);
 
       this.setAuth(true);
       this.setUser(user);
     } catch (error) {
-      console.log('login error', error);
+      // eslint-disable-next-line no-console
+      console.log(error);
     }
   }
 
   async registration(email: string, password: string) {
     try {
-      const useCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const useCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
       const { user } = useCredential;
-
-      console.log('registration, user', user);
 
       this.setAuth(true);
       this.setUser(user);
     } catch (error) {
-      console.log('registration, error', error);
+      // eslint-disable-next-line no-console
+      console.log(error);
     }
   }
 
@@ -64,7 +70,8 @@ export default class Store {
       this.setAuth(false);
       this.setUser({} as User);
     } catch (error) {
-      console.log('logout, error', error);
+      // eslint-disable-next-line no-console
+      console.log(error);
     }
   }
 }
