@@ -7,7 +7,7 @@ const Tree: React.FC = () => {
 
   return (
     <>
-      <h1>{title}</h1>
+      <h1 className="p-5 text-center font-sans text-3xl">{title}</h1>
       <Person />
     </>
   );
