@@ -1,1 +1,1 @@
-export { default as Router } from './Router/Router';
+export { default as Input } from './Input/Input';

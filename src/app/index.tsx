@@ -4,6 +4,8 @@ import { createRoot } from 'react-dom/client';
 import Store from 'store/store';
 import App from './App';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 interface State {
   store: Store;
 }

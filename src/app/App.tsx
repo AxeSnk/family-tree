@@ -2,7 +2,7 @@ import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 
-import { Router } from '../components';
+import { Router } from '../blocks';
 
 import './index.scss';
 

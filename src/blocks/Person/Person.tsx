@@ -1,16 +1,25 @@
-import Input from 'components/Input/Input';
 import React, { useState } from 'react';
 
-const Person: React.FC = () => {
-  const [person, setPerson] = useState({ name: '', surname: '' });
+import { Input } from 'components';
+
+type TPerson = {
+  name: string;
+  surname: string;
+};
+
+const Person: React.FC<TPerson> = ({ name = '', surname = '' }) => {
+  const [person, setPerson] = useState({
+    name,
+    surname,
+  });
 
   const handleChange = (
     ev: React.ChangeEvent<HTMLInputElement>,
-    name: string,
+    key: string,
   ) => {
     const { value } = ev.target;
 
-    setPerson((prev) => ({ ...prev, [name]: value }));
+    setPerson((prev) => ({ ...prev, [key]: value }));
   };
 
   return (
