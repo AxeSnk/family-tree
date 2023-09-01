@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/62bc6567-b252-4ee3-b6e7-0214b98ee420/deploy-status)](https://app.netlify.com/sites/euphonious-mooncake-55f069/deploys)
