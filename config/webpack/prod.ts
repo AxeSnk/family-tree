@@ -11,7 +11,7 @@ const configProd: webpack.Configuration = {
   devtool: false,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.[fullhash].css',
+      filename: 'style.[contenthash].css',
     }),
   ],
   module: {
