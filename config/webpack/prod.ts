@@ -34,15 +34,7 @@ const configProd: webpack.Configuration = {
     ],
     moduleIds: 'deterministic',
     splitChunks: {
-      minChunks: 1,
-      cacheGroups: {
-        vendor: {
-          test: /\/node_modules\//,
-          name: 'vendors',
-          chunks: 'all',
-          minChunks: 1,
-        },
-      },
+      minChunks: 1
     },
   },
 };
